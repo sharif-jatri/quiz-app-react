@@ -10,7 +10,7 @@ import {
     Text
 } from "@mantine/core";
 import classes from "./Login.module.css";
-import {login, logout} from "../../redux/auth.js";
+import {login, logout, saveProfile} from "../../redux/auth.js";
 
 function Login() {
     const { isAuthenticated } = useSelector((state) => state.auth);
@@ -32,7 +32,7 @@ function Login() {
             <Text mt='xl'>Username: user or admin</Text>
             <Text>Password: user or {JSON.stringify(data)}</Text>
             <h1> The auth is: { isAuthenticated ? 'logged in' : 'guest'}</h1>
-            <button onClick={() => dispatch(login())}>Login</button>
+            <button onClick={() => dispatch(saveProfile(JSON.stringify(data)))}>Login</button>
             <button onClick={() => dispatch(logout())}>Logout</button>
 
             <Paper withBorder shadow="md" p={30} mt={30} radius="md">
