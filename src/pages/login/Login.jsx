@@ -32,9 +32,6 @@ function Login() {
             <Text mt='xl'>Username: user or admin</Text>
             <Text>Password: user or {JSON.stringify(data)}</Text>
             <h1> The auth is: { isAuthenticated ? 'logged in' : 'guest'}</h1>
-            <button onClick={() => dispatch(login())}>Login</button>
-            <button onClick={() => dispatch(logout())}>Logout</button>
-
             <Paper withBorder shadow="md" p={30} mt={30} radius="md">
                 <TextInput value={data.username} name="username" onChange={changeHandler} label="Username" placeholder="Your username" />
                 <PasswordInput
@@ -45,7 +42,7 @@ function Login() {
                     placeholder="Your password"
                     mt="md"
                 />
-                <Button fullWidth mt="xl">
+                <Button onClick={() => dispatch(login(data))} fullWidth mt="xl">
                     Sign in
                 </Button>
             </Paper>
