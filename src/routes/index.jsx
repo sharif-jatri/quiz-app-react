@@ -15,7 +15,7 @@ const Router = () => {
 
     const hasAlreadyAuthenticated = () => {
         if(userDetails.username === 'user') return <Navigate to='/quiz' replace />
-        else if(userDetails.username === '01521485583') return <Navigate to='/questions' replace />
+        else if(userDetails.username === 'admin') return <Navigate to='/questions' replace />
     }
     return (
         <BrowserRouter>

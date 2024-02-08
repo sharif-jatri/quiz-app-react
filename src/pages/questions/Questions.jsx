@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { Button, Container, List, Title, Text, TextInput, Modal } from "@mantine/core";
+import { Button, Container, List, Title, Text, TextInput } from "@mantine/core";
 import Question from "./question/Question.jsx";
 
 function Questions() {
